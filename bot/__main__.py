@@ -61,7 +61,7 @@ def start(update, context):
         start_string = f'''
 Hey!
 I can upload anything you want, so Start uploading! By @nexiuo
-Type /help{BotCommands.HelpCommand} to get a list of available commands
+Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
@@ -95,23 +95,6 @@ def log(update, context):
 
 help_string_telegraph = f'''
 NOTE: Try each command without any perfix to see more detalis.<br><br>
-<b>Leech Related Commands:</b><br>
-<b>/{BotCommands.LeechCommand}</b>: Start leeching to Telegram.<br><br>
-<b>/{BotCommands.ZipLeechCommand}</b>: Start leeching and upload the file/folder compressed with zip extension.<br><br>
-<b>/{BotCommands.UnzipLeechCommand}</b>: Start leeching and upload the file/folder extracted from any archive extension.<br><br>
-<b>/{BotCommands.QbLeechCommand}</b>: Start leeching using qBittorrent.<br><br>
-<b>/{BotCommands.QbZipLeechCommand}</b>: Start leeching using qBittorrent and upload the file/folder compressed with zip extension.<br><br>
-<b>/{BotCommands.QbUnzipLeechCommand}</b>: Start leeching using qBittorrent and upload the file/folder extracted from any archive extension<br><br>
-<b>/{BotCommands.YtdlLeechCommand}</b>: Leech yt-dlp supported link.<br><br>
-<b>/{BotCommands.YtdlZipLeechCommand}</b>: Leech yt-dlp supported link as zip.<br><br>
-<b>Other Commands:</b><br>
-<b>/{BotCommands.LeechSetCommand}</b> [query]: Leech settings.<br><br>
-<b>/{BotCommands.SetThumbCommand}</b>: Reply photo to set it as Thumbnail.<br><br>
-<b>/{BotCommands.BtSelectCommand}</b>: Select files from torrents by gid or reply.<br><br>
-<b>/{BotCommands.CancelMirror}</b>: Cancel task by gid or reply.<br><br>
-<b>/{BotCommands.StatusCommand}</b>: Shows a status of all the downloads.<br><br>
-<b>/{BotCommands.StatsCommand}</b>: Show stats of the machine where the bot is hosted in.<br><br>
-<b>/{BotCommands.PingCommand}</b>: Check how long it takes to Ping the Bot (Only Owner & Sudo).<br><br>
 <b>Sudo/Owner Only Commands:</b> <br>
 <b>/{BotCommands.SleepCommand}:/</b> idle the bot (Only Owner & Sudo).<br><br>
 <b>/{BotCommands.DeleteCommand}</b> [drive_url]: Delete file/folder from Google Drive (Only Owner & Sudo).<br><br>
@@ -129,15 +112,26 @@ NOTE: Try each command without any perfix to see more detalis.<br><br>
 <b>/{BotCommands.EvalCommand}</b>: Run Python Code Line | Lines (Only Owner).<br><br>
 <b>/{BotCommands.ExecCommand}</b>: Run Commands In Exec (Only Owner).<br><br>
 <b>/{BotCommands.ClearLocalsCommand}</b>: Clear <b>{BotCommands.EvalCommand}</b> or <b>{BotCommands.ExecCommand}</b> locals (Only Owner).<br><br>
-<b>RSS Related Commands:</b><br>
-<b>/{BotCommands.RssListCommand}</b>: List all subscribed rss feed info (Only Owner & Sudo).<br><br>
-<b>/{BotCommands.RssGetCommand}</b>: Force fetch last N links (Only Owner & Sudo).<br><br>
-<b>/{BotCommands.RssSubCommand}</b>: Subscribe new rss feed (Only Owner & Sudo).<br><br>
-<b>/{BotCommands.RssUnSubCommand}</b>: Unubscribe rss feed by title (Only Owner & Sudo).<br><br>
-<b>/{BotCommands.RssSettingsCommand}</b>[query]: Rss Settings (Only Owner & Sudo).<br><br>
 '''
 help_string = f'''
-Hei, Need Help!!
+<b>Leech Related Commands:</b><br>
+<b>/{BotCommands.LeechCommand}</b>: Start leeching to Telegram.<br><br>
+<b>/{BotCommands.ZipLeechCommand}</b>: Start leeching and upload the file/folder compressed with zip extension.<br><br>
+<b>/{BotCommands.UnzipLeechCommand}</b>: Start leeching and upload the file/folder extracted from any archive extension.<br><br>
+<b>/{BotCommands.QbLeechCommand}</b>: Start leeching using qBittorrent.<br><br>
+<b>/{BotCommands.QbZipLeechCommand}</b>: Start leeching using qBittorrent and upload the file/folder compressed with zip extension.<br><br>
+<b>/{BotCommands.QbUnzipLeechCommand}</b>: Start leeching using qBittorrent and upload the file/folder extracted from any archive extension<br><br>
+<b>/{BotCommands.YtdlLeechCommand}</b>: Leech yt-dlp supported link.<br><br>
+<b>/{BotCommands.YtdlZipLeechCommand}</b>: Leech yt-dlp supported link as zip.<br><br>
+<b>Other Commands:</b><br>
+<b>/{BotCommands.LeechSetCommand}</b> [query]: Leech settings.<br><br>
+<b>/{BotCommands.SetThumbCommand}</b>: Reply photo to set it as Thumbnail.<br><br>
+<b>/{BotCommands.BtSelectCommand}</b>: Select files from torrents by gid or reply.<br><br>
+<b>/{BotCommands.CancelMirror}</b>: Cancel task by gid or reply.<br><br>
+<b>/{BotCommands.StatusCommand}</b>: Shows a status of all the downloads.<br><br>
+<b>/{BotCommands.StatsCommand}</b>: Show stats of the machine where the bot is hosted in.<br><br>
+<b>/{BotCommands.PingCommand}</b>: Check how long it takes to Ping the Bot (Only Owner & Sudo).<br><br>
+
 '''
 try:
     help = telegraph.create_page(
