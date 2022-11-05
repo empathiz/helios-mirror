@@ -287,9 +287,9 @@ ytdl_handler = CommandHandler(BotCommands.YtdlCommand, ytdl,
 ytdl_zip_handler = CommandHandler(BotCommands.YtdlZipCommand, ytdlZip,
                                     filters=CustomFilters.owner_filter | CustomFilters.authorized_user, run_async=True)
 ytdl_leech_handler = CommandHandler(BotCommands.YtdlLeechCommand, ytdlleech,
-                                filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
+                                filters=CustomFilters.owner_filter | CustomFilters.authorized_user, run_async=True)
 ytdl_zip_leech_handler = CommandHandler(BotCommands.YtdlZipLeechCommand, ytdlZipleech,
-                                    filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
+                                    filters=CustomFilters.owner_filter | CustomFilters.authorized_user, run_async=True)
 quality_handler = CallbackQueryHandler(select_format, pattern="qu", run_async=True)
 
 dispatcher.add_handler(ytdl_handler)
