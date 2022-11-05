@@ -114,24 +114,22 @@ NOTE: Try each command without any perfix to see more detalis.<br><br>
 <b>/{BotCommands.ClearLocalsCommand}</b>: Clear <b>{BotCommands.EvalCommand}</b> or <b>{BotCommands.ExecCommand}</b> locals (Only Owner).<br><br>
 '''
 help_string = f'''
-<b>Leech Related Commands:</b><br>
-<b>/{BotCommands.LeechCommand}</b>: Start leeching to Telegram.<br><br>
-<b>/{BotCommands.ZipLeechCommand}</b>: Start leeching and upload the file/folder compressed with zip extension.<br><br>
-<b>/{BotCommands.UnzipLeechCommand}</b>: Start leeching and upload the file/folder extracted from any archive extension.<br><br>
-<b>/{BotCommands.QbLeechCommand}</b>: Start leeching using qBittorrent.<br><br>
-<b>/{BotCommands.QbZipLeechCommand}</b>: Start leeching using qBittorrent and upload the file/folder compressed with zip extension.<br><br>
-<b>/{BotCommands.QbUnzipLeechCommand}</b>: Start leeching using qBittorrent and upload the file/folder extracted from any archive extension<br><br>
-<b>/{BotCommands.YtdlLeechCommand}</b>: Leech yt-dlp supported link.<br><br>
-<b>/{BotCommands.YtdlZipLeechCommand}</b>: Leech yt-dlp supported link as zip.<br><br>
-<b>Other Commands:</b><br>
-<b>/{BotCommands.LeechSetCommand}</b> [query]: Leech settings.<br><br>
-<b>/{BotCommands.SetThumbCommand}</b>: Reply photo to set it as Thumbnail.<br><br>
-<b>/{BotCommands.BtSelectCommand}</b>: Select files from torrents by gid or reply.<br><br>
-<b>/{BotCommands.CancelMirror}</b>: Cancel task by gid or reply.<br><br>
-<b>/{BotCommands.StatusCommand}</b>: Shows a status of all the downloads.<br><br>
-<b>/{BotCommands.StatsCommand}</b>: Show stats of the machine where the bot is hosted in.<br><br>
-<b>/{BotCommands.PingCommand}</b>: Check how long it takes to Ping the Bot (Only Owner & Sudo).<br><br>
-
+Leech Related Commands:
+/{BotCommands.LeechCommand}: Start leeching to Telegram.
+/{BotCommands.ZipLeechCommand}: Start leeching and upload the file/folder compressed with zip extension.
+/{BotCommands.UnzipLeechCommand}: Start leeching and upload the file/folder extracted from any archive extension.
+/{BotCommands.QbLeechCommand}: Start leeching using qBittorrent.
+/{BotCommands.QbZipLeechCommand}: Start leeching using qBittorrent and upload the file/folder compressed with zip extension.
+/{BotCommands.QbUnzipLeechCommand}: Start leeching using qBittorrent and upload the file/folder extracted from any archive extension
+/{BotCommands.YtdlLeechCommand}: Leech yt-dlp supported link.
+/{BotCommands.YtdlZipLeechCommand}: Leech yt-dlp supported link as zip.
+Other Commands:
+/{BotCommands.LeechSetCommand}: Leech settings.
+/{BotCommands.SetThumbCommand}: Reply photo to set it as Thumbnail.
+/{BotCommands.BtSelectCommand}: Select files from torrents by gid or reply.
+/{BotCommands.CancelMirror}: Cancel task by gid or reply.
+/{BotCommands.StatusCommand}: Shows a status of all the downloads.
+/{BotCommands.StatsCommand}: Show stats of the machine where the bot is hosted in.
 '''
 try:
     help = telegraph.create_page(
