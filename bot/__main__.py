@@ -115,17 +115,16 @@ NOTE: Try each command without any perfix to see more detalis.<br><br>
 '''
 help_string = f'''
 Leech Related Commands:
-/{BotCommands.LeechCommand}: Start leeching to Telegram.
-/{BotCommands.ZipLeechCommand}: Start leeching and upload the file/folder compressed with zip extension.
-/{BotCommands.UnzipLeechCommand}: Start leeching and upload the file/folder extracted from any archive extension.
-/{BotCommands.QbLeechCommand}: Start leeching using qBittorrent.
-/{BotCommands.QbZipLeechCommand}: Start leeching using qBittorrent and upload the file/folder compressed with zip extension.
-/{BotCommands.QbUnzipLeechCommand}: Start leeching using qBittorrent and upload the file/folder extracted from any archive extension
-/{BotCommands.YtdlLeechCommand}: Leech yt-dlp supported link.
-/{BotCommands.YtdlZipLeechCommand}: Leech yt-dlp supported link as zip.
-Other Commands:
-/{BotCommands.LeechSetCommand}: Leech settings.
-/{BotCommands.SetThumbCommand}: Reply photo to set it as Thumbnail.
+/{BotCommands.LeechCommand} [download_url][magnet_link]: Start leeching to Telegram
+/{BotCommands.ZipLeechCommand} [download_url][magnet_link]: Start leeching to Telegram and upload it as (.zip)
+/{BotCommands.UnzipLeechCommand} [download_url][magnet_link]: Start leeching to Telegram and if downloaded file is any archive, extracts it to Telegram
+/{BotCommands.QbLeechCommand} [magnet_link]: Start leeching to Telegram using selection of files before leeching
+/{BotCommands.QbZipLeechCommand} [magnet_link]: Start leeching to Telegram using selection and upload it as (.zip)
+/{BotCommands.QbUnzipLeechCommand} [magnet_link]: Start leeching to Telegram using selection and if downloaded file is any archive, extracts it to Telegram
+/{BotCommands.YtdlLeechCommand} [youtube-dl supported link]: Leech through youtube-dl
+/{BotCommands.YtdlZipLeechCommand} [youtube-dl supported link]: Leech through youtube-dl and zip before uploading
+/{BotCommands.LeechSetCommand} Leech Settings
+/{BotCommands.SetThumbCommand} Reply photo to set it as Thumbnail
 /{BotCommands.BtSelectCommand}: Select files from torrents by gid or reply.
 /{BotCommands.CancelMirror}: Cancel task by gid or reply.
 /{BotCommands.StatusCommand}: Shows a status of all the downloads.
@@ -133,7 +132,7 @@ Other Commands:
 '''
 try:
     help = telegraph.create_page(
-        title='Helios-Mirror Help',
+        title='Welp',
         content=help_string_telegraph,
     )["path"]
 except Exception as err:
