@@ -59,12 +59,13 @@ def start(update, context):
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive or to telegram!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+Hey!
+I can upload anything you want, so Start uploading! By @nexiuo
+Type /help{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('Not an Authorized user, deploy your own helios-mirror-leech bot', context.bot, update.message, reply_markup)
+        sendMarkup('join @nexiuo', context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
@@ -94,15 +95,6 @@ def log(update, context):
 
 help_string_telegraph = f'''
 NOTE: Try each command without any perfix to see more detalis.<br><br>
-<b>Mirror Related Commands:</b><br>
-<b>/{BotCommands.MirrorCommand}</b> : Start mirroring to Google Drive.<br><br>
-<b>/{BotCommands.ZipMirrorCommand}</b>: Start mirroring and upload the file/folder compressed with zip extension.<br><br>
-<b>/{BotCommands.UnzipMirrorCommand}</b>: Start mirroring and upload the file/folder extracted from any archive extension.<br><br>
-<b>/{BotCommands.QbMirrorCommand}</b>: Start Mirroring to Google Drive using qBittorrent.<br><br>
-<b>/{BotCommands.QbZipMirrorCommand}</b> : Start mirroring using qBittorrent and upload the file/folder compressed with zip extension.<br><br>
-<b>/{BotCommands.QbUnzipMirrorCommand}</b>: Start mirroring using qBittorrent and upload the file/folder extracted from any archive extension.<br><br>
-<b>/{BotCommands.YtdlCommand}</b>: Mirror yt-dlp supported link.<br><br>
-<b>/{BotCommands.YtdlZipCommand}</b>: Mirror yt-dlp supported link as zip.<br><br>
 <b>Leech Related Commands:</b><br>
 <b>/{BotCommands.LeechCommand}</b>: Start leeching to Telegram.<br><br>
 <b>/{BotCommands.ZipLeechCommand}</b>: Start leeching and upload the file/folder compressed with zip extension.<br><br>
@@ -113,14 +105,10 @@ NOTE: Try each command without any perfix to see more detalis.<br><br>
 <b>/{BotCommands.YtdlLeechCommand}</b>: Leech yt-dlp supported link.<br><br>
 <b>/{BotCommands.YtdlZipLeechCommand}</b>: Leech yt-dlp supported link as zip.<br><br>
 <b>Other Commands:</b><br>
-<b>/{BotCommands.CloneCommand}</b> [drive_url]: Copy file/folder to Google Drive.<br><br>
-<b>/{BotCommands.CountCommand}</b> [drive_url]: Count file/folder of Google Drive.<br><br>
 <b>/{BotCommands.LeechSetCommand}</b> [query]: Leech settings.<br><br>
 <b>/{BotCommands.SetThumbCommand}</b>: Reply photo to set it as Thumbnail.<br><br>
 <b>/{BotCommands.BtSelectCommand}</b>: Select files from torrents by gid or reply.<br><br>
 <b>/{BotCommands.CancelMirror}</b>: Cancel task by gid or reply.<br><br>
-<b>/{BotCommands.ListCommand}</b> [query]: Search in Google Drive(s).<br><br>
-<b>/{BotCommands.SearchCommand}</b> [query]: Search for torrents with API.<br><br>
 <b>/{BotCommands.StatusCommand}</b>: Shows a status of all the downloads.<br><br>
 <b>/{BotCommands.StatsCommand}</b>: Show stats of the machine where the bot is hosted in.<br><br>
 <b>/{BotCommands.PingCommand}</b>: Check how long it takes to Ping the Bot (Only Owner & Sudo).<br><br>
